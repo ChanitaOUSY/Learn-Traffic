@@ -1,6 +1,8 @@
 package mahidol.tan.chanitaou.learntraffic;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 //Sound Effect
                 MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.pig);
                 mediaPlayer.start();
+
+//web view
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://youtu.be/ke1BNbHLXPE"));
+                        startActivity(intent);
 
 
                 //onClick
